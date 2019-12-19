@@ -19,30 +19,24 @@ public class Epractica1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-          double temperaturas[] = new double[7];
-        String diasSemana[]={"lunes","martes","miercoles","jueves","viernes","sabado","domingo"};
-        double suma = 0;
-        int dia;
+         int num, cont = 0;
         Scanner sc = new Scanner(System.in);
-        sc.useLocale(Locale.ENGLISH);
 
-        System.out.println("Anota temperatura de la semana");
-
-        for (int i = 0; i < temperaturas.length; i++) {
-            System.out.println(diasSemana[i] + ":");
-            temperaturas[i] = sc.nextDouble();
-            suma = suma + temperaturas[i];
+        int numero[] = new int[10];
+       
+        for (int i = 0; i < numero.length; i++) {
+            System.out.println("Inserte numeros");
+            numero[i] = sc.nextInt();
         }
+        System.out.println("Anota número a buscar:");
+        num = sc.nextInt();
 
-        System.out.println("La temperatura media ha sido:" + suma / 7);
 
-        do {
-            System.out.println("Anota día del que quieras saber la temperatura:");
-            dia = sc.nextInt();
-        } while (dia<1 || dia>7);
-        
-        System.out.println("La temperatura fue "+ temperaturas[dia-1] );
-        
+        for (int i = 0; i < numero.length; i++) {
+            if (numero[i]==num)
+                cont++;
+        }
+        System.out.println("Numeros iguales: "+cont);
     }
     
 }
